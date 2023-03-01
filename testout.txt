@@ -1,1 +1,7 @@
-kls;djvfn
+per_cent = {'ТКБ': 5.6, 'СКБ': 5.9, 'ВТБ': 4.28, 'СБЕР': 4.0}
+deposit_list = list(per_cent.values())
+money = int(input("Введите сумму, которую хотите положить под проценты:"))
+deposit = []
+for d in deposit_list:
+    deposit.append(round(d/100*money, 2))
+print("Максимальная сумма, которую вы можете заработать:  ", max(deposit))
